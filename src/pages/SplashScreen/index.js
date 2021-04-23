@@ -7,7 +7,7 @@ function SplashScreen() {
   return (
     <View style={styles.container}>
       <Logo />
-      <Text>Money Tracker</Text>
+      <Text style={styles.text}>Money Tracker</Text>
     </View>
   );
 }
@@ -18,6 +18,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  text: {
+    fontFamily: 'Poppins-Medium',
+    // fontFamily: 'Ubuntu-Medium',
+    fontWeight: '500',
+    fontSize: 32,
   },
 });
 
