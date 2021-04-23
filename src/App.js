@@ -1,10 +1,16 @@
 import React from 'react';
 import {View} from 'react-native';
+import 'react-native-gesture-handler';
+import {NavigationContainer} from '@react-navigation/native';
 
-import {SplashScreen, SignIn} from './pages';
+import Router from './router';
 
 function App() {
-  return <SplashScreen />;
+  return (
+    <NavigationContainer>
+      <Router />
+    </NavigationContainer>
+  );
 }
 
 export default App;
