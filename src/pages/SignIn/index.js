@@ -1,10 +1,14 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
+import {Header, TextInput, Button} from '../../components';
 
 function SignIn() {
   return (
     <View>
-      <Text>SignIn</Text>
+      <Header title="Sign In" />
+      <TextInput label="Email Address" placeholder="Input your email" />
+      <TextInput label="Password" placeholder="Input your password" />
+      <Button text="Sign In" />
     </View>
   );
 }
