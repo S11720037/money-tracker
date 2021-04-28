@@ -16,8 +16,8 @@ function SignUp({navigation}) {
         if (response.didCancel) {
           setHasPhoto(false);
         } else {
-          setHasPhoto(true);
           setPhoto(response.uri);
+          setHasPhoto(true);
         }
       },
     );
