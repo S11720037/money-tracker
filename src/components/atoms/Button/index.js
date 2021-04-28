@@ -1,29 +1,30 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-function Button(props) {
+function Button({text, color = '#02CF8E', textColor = '#020202'}) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>{props.text}</Text>
+    <View style={styles.container(color)}>
+      <Text style={styles.text(textColor)}>{text}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#02CF8E',
+  container: color => ({
+    backgroundColor: color,
     height: 45,
     // flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 8,
-  },
+  }),
 
-  text: {
+  text: textColor => ({
     fontFamily: 'Poppins-Medium',
     fontWeight: '500',
     fontSize: 14,
-  },
+    color: textColor,
+  }),
 });
 
 export default Button;
