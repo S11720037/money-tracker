@@ -2,7 +2,7 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Header, TextInput, Button, Gap} from '../../components';
 
-function SignIn() {
+function SignIn({navigation}) {
   return (
     <View style={{flex: 1}}>
       <Header title="Sign In" />
@@ -19,7 +19,12 @@ function SignIn() {
 
         <Gap height={12} />
 
-        <Button text="Create New Account" color="#8D92A3" textColor="#FFFFFF" />
+        <Button
+          text="Create New Account"
+          color="#8D92A3"
+          textColor="#FFFFFF"
+          onPress={() => navigation.navigate('SignUp')}
+        />
       </View>
     </View>
   );
