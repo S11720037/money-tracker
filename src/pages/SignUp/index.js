@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import {launchImageLibrary} from 'react-native-image-picker';
+import {showMessage} from 'react-native-flash-message';
 
 import {Header} from '../../components';
 import {TextInput, Gap, Button} from '../../components';
@@ -14,6 +15,12 @@ function SignUp({navigation}) {
       {maxWidth: 300, maxHeight: 300, includeBase64: true},
       response => {
         if (response.didCancel) {
+          showMessage({
+            message: 'Email sudah terdaftar pada aplikasi',
+            type: 'danger',
+            // backgroundColor: '#D9435E',
+            // color: 'white',
+          });
           setHasPhoto(false);
         } else {
           setPhoto(response.uri);
