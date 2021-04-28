@@ -1,21 +1,34 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+
+import {IconBack} from '../../../assets/';
+import {Gap} from '../../atoms';
 
 function Header(props) {
   return (
-    <View>
+    <View style={styles.container}>
+      {props.onBack && (
+        <TouchableOpacity onPress={props.onBack}>
+          <IconBack />
+        </TouchableOpacity>
+      )}
+      <Gap width={32} />
       <Text style={styles.text}>{props.title}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingLeft: 24,
+    paddingVertical: 37,
+    backgroundColor: 'white',
+  },
   text: {
     fontFamily: 'Poppins-Medium',
     fontSize: 22,
-    marginLeft: 24,
-    marginVertical: 37,
-    fontWeight: '500',
   },
 });
 
