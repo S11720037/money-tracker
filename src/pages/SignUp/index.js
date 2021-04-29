@@ -16,7 +16,7 @@ function SignUp({navigation}) {
       response => {
         if (response.didCancel) {
           showMessage({
-            message: 'Email sudah terdaftar pada aplikasi',
+            message: 'Upload foto dibatalkan',
             type: 'danger',
             // backgroundColor: '#D9435E',
             // color: 'white',
