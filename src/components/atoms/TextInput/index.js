@@ -5,7 +5,13 @@ function TextInput(props) {
   return (
     <View>
       <Text style={styles.label}>{props.label}</Text>
-      <TextInputRN style={styles.input} placeholder={props.placeholder} />
+      <TextInputRN
+        style={styles.input}
+        placeholder={props.placeholder}
+        value={props.value}
+        onChangeText={props.onChangeText}
+        secureTextEntry={props.secureTextEntry}
+      />
     </View>
   );
 }
